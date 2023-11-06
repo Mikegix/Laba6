@@ -1,0 +1,5 @@
+Запуск контейнера с самоудалением после остановки, присваиванием имени test, в фоновом режиме, с томом
+docker run --rm --name test -e POSTGRES_PASSWORD=test –p 5432:5432 -v /data:/var/lib/postgresql/data -d postgres 
+
+Открытие через оболочку psql для доступа к СУБД postgres
+docker exec -it test psql -U postgres
